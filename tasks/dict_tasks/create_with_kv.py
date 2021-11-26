@@ -26,6 +26,7 @@ users = {}
 
 def save_user(users_list: dict, user_data: dict) -> dict:
     # TODO вставить код сюда
+    users_list.update({user_data['login']: {"name": user_data.get("name"), "age": user_data.get("age")}})
     return users_list
 
 
@@ -38,6 +39,5 @@ if __name__ == '__main__':
     print(f"Добавляем пользователя: {user['login']}")
     save_user(users, user)
     print('Пользователь успешно добавлен!'
-          if users.get('some_user', {}).get('login') is None
-          and users.get('some_user', {}).get('name') == 'Name'
+          if users.get('some_user', {}).get('login') is None and users.get('some_user', {}).get('name') == 'Name'
           else 'Ошибка добавления пользователя!')
