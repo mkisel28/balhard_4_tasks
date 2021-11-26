@@ -18,7 +18,7 @@ new_workers = [
 
 
 def list_extend(first_list: list, second_list: list) -> list:
-    return first_list
+    return first_list.extend(second_list)
 
 
 if __name__ == '__main__':
@@ -26,3 +26,4 @@ if __name__ == '__main__':
     print(f"В компании пришло {len(new_workers)} человека: {', '.join(new_workers)}")
     list_extend(user_list, new_workers)
     print(f"Теперь компании работает {len(user_list)} человек.")
+    print(user_list)

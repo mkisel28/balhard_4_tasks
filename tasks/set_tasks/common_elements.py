@@ -8,7 +8,15 @@
 
 def common_elements(list_1: list, list_2) -> set:
     # TODO вставить код сюда
-    result = None
+    # list_1.set(list_2)
+    # print(list_2)
+    # print(list_1)
+    # result = list(set(list_1))
+    # print(result)
+    # result = {x for x in list_1 if list_1.count(x) in list_1}
+    a = set(list_1)
+    b = set(list_2)
+    result = a | b
     return result
 
 

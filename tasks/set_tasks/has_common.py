@@ -8,8 +8,10 @@
 
 def has_common(set_1: set, set_2: set) -> bool:
     # TODO вставить код сюда
-    result = None
-    return result
+    for i in set_1:
+        if i in set_2:
+            return True
+    return False
 
 
 if __name__ == '__main__':

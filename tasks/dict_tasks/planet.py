@@ -19,10 +19,12 @@
 --------------------------------------------------------------------------------
 get_planet_name(3) -> 'Земля'
 """
+planets = ['Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер', 'Сатурн', 'Уран', 'Нептун']
+dic = dict(zip(range(1, 9), planets))
 
 
 def get_planet_name(planet_num: int) -> str:
-    result = None
+    result = dic.get(planet_num)
     return result
 
 

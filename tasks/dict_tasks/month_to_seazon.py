@@ -12,21 +12,16 @@
 - month_to_season(7) -> 'Лето'
 - month_to_season(9) -> 'Осень'
 """
+seasons = ["Зима", 'Зима', 'Весна', 'Весна', 'Весна', 'Лето', 'Лето', 'Лето', 'Лето', 'Лето', 'Лето', "Зима"]
+MONTH = dict(zip(range(1, 13), seasons))
 
 
 def month_to_season(month: int) -> str:
-    """Возвращает сезон по его номеру
-
-    :param month: номер сезона
-    :type month: int
-
-    :return: название сезона, например "зима"
-    :rtype: str
-    """
-    season = None
+    season = MONTH.get(month)
     return season
 
 
 if __name__ == '__main__':
-    month_number = int(input('Введите номер месяца: '))
+    month_number = int(input('Введите \
+        номер месяца: '))
     print(f'Сезон: {month_to_season(month_number)}')

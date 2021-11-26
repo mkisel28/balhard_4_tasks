@@ -7,7 +7,8 @@
 
 def sym_diff(set_1: set, set_2: set) -> set:
     # TODO вставить код сюда
-    result = None
+    result = set_1.symmetric_difference(set_2)
+    print(result)
     return result
 
 
